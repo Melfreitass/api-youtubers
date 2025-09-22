@@ -1,0 +1,19 @@
+{
+  "name": "atividadeavaliativa_melissagabriellydefreitas",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "keywords": ["SENAI", "API", "Youtubers", "CRUD"],
+  "author": "Melissa Freitas",
+  "license": "MIT",
+  "description": "Atividade avaliativa com API de tema Youtubers, utilizando CRUD",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
