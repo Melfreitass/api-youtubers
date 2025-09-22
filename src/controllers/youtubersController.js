@@ -99,5 +99,72 @@ const creatYoutuber = (req, res) => {
     })
 }
 
+const updateYoutuber = (req, res) => {
+    const id = parseInt(req.params.id);
+    const {nome, canal, categoria, inscritos, videos, visualizacoes, ultimoVideo, pais} = req.body;
+
+    const idParaEditar = id;
+
+    if(isNaN(idParaEditar)) {
+        return res.status(400).json({
+            success: false,
+            message: "O id deve ser válido!!"
+        })
+    }
+
+    const youtuberExiste = youtubers.find(youtuber => youtuber.id === id);
+
+    if(!youtuberExiste) {
+        return res.status(400).json({
+            success: false,
+            message: "O youtuber não existe"
+        })
+    }
+
+    if(canal) {
+        if (canal.length < 3) {
+            return res.status(400).json({
+                success: false,
+                message: `O nome do canal deve ter ao menos 3 caracteres`
+            })
+        }
+    }
+
+    if(inscritos) {
+        if (inscritos < 0) {
+            return res.status(400).json({
+                success: false,
+                message: `O numero de inscritos não pode ser negativo`
+        })
+    }
+}
+
+    const youtubersAtualizados = youtubers.map(youtuber => {
+        return youtuber.id === id
+        ?{
+            ...youtuber,
+            ...(nome && {nome}),
+            ...(canal && {canal}),
+            ...(categoria && {categoria}),
+            ...(inscritos && {inscritos}),
+            ...(videos && {videos}),
+            ...(visualizacoes && {visualizacoes}),
+            ...(ultimoVideo && {ultimoVideo}),
+            ...(pais && {pais}),
+        }
+        :youtuber
+    })
+
+    youtubers.splice(0, youtubers.length, ...youtubersAtualizados);
+
+    const youtuberNovo = youtubers.find(youtuber => youtuber.id === id);
+
+    res.status(200).json({
+        success: true,
+        message: "Dados Atualizados com sucesso",
+        youtuber: youtuberNovo
+    })
+}
+
 
 export { getAllYoutubers, getById, creatYoutuber, updateYoutuber }    
