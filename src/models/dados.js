@@ -70,9 +70,9 @@ const youtubers = [
         "nome": "Nerdologia",
         "canal": "Nerdologia",
         "categoria": "educativo",
-        "inscritos": "4M+",
+        "inscritos": 5000,
         "videos": 700,
-        "vizualizacoes": 5000,
+        "vizualizacoes": "300M+",
         "ultimoVideo": "2025-07-18",
         "pais": "Brasil"
       },
@@ -81,9 +81,9 @@ const youtubers = [
         "nome": "Whindersson Nunes",
         "canal": "Whindersson Nunes",
         "categoria": "humor e vlogs",
-        "inscritos": "44M+",
+        "inscritos": 4000000,
         "videos": 500,
-        "vizualizacoes": 4000000,
+        "vizualizacoes": "3B+",
         "ultimoVideo": "2025-08-10",
         "pais": "Brasil"
       },
@@ -92,9 +92,9 @@ const youtubers = [
         "nome": "Manual do Mundo",
         "canal": "Manual do Mundo",
         "categoria": "ciência e DIY",
-        "inscritos": "18M+",
+        "inscritos": 4000000,
         "videos": 1800,
-        "vizualizacoes": 4000000,
+        "vizualizacoes": "3B+",
         "ultimoVideo": "2025-09-10",
         "pais": "Brasil"
       },
@@ -103,9 +103,9 @@ const youtubers = [
         "nome": "TED",
         "canal": "TED",
         "categoria": "palestras e ideias",
-        "inscritos": "25M+",
+        "inscritos": 100500,
         "videos": 4500,
-        "vizualizacoes": 1000000,
+        "vizualizacoes": "3B+",
         "ultimoVideo": "2024-09-21",
         "pais": "Internacional"
       }

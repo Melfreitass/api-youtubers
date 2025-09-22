@@ -13,18 +13,20 @@ const getAllYoutubers = (req, res) => {
     if (pais) {
         resultado = resultado.filter((y) => y.pais.toLocaleLowerCase().includes(pais.toLocaleLowerCase()));
     }
-
-    //let pequenos = inscritos < 100000
     
-    //if (inscritos) {
-    //    if (pequenos) {
-    //        resultado = resultado.filter((l) => l.pequenos)
-    //    }
-    //}
+    if (inscritos) {
+        if (inscritos === "pequenos") {
+            resultado = resultado.filter((l) => l.inscritos <= 100000)
+        }
 
-    //if (ultimoVideo) {
-    //    resultado = resultado.filter((l) => l.ultimoVideo >= new Date().getDay() - 30)
-    //}
+        if (inscritos === "medios") {
+            resultado = resultado.filter((l) => l.inscritos > 100000 && l.inscritos <= 1000000)
+        }
+
+        if (inscritos === "grandes") {
+            resultado = resultado.filter((l) => l.inscritos) 
+        }
+    }
 
     res.status(200).json({
         total: youtubers.length,
@@ -166,5 +168,27 @@ const updateYoutuber = (req, res) => {
     })
 }
 
+const deleteYoutuber = (req, res) => {
+    let id = parseInt(req.params.id);
 
-export { getAllYoutubers, getById, creatYoutuber, updateYoutuber }    
+    const youtuberRemover = youtubers.find(y => y.id === id);
+
+    if (!youtuberRemover) {
+        return res.status(404).json({
+            success: false,
+            message: `Esse youtuber não exixte`
+        })
+    }
+
+    const youtubersFiltrados = youtubers.filter(youtuber => youtuber.id !== id);
+
+    youtubers.splice(0, youtubers.length, ...youtubersFiltrados);
+
+    res.status(200).json({
+        success: true,
+        message: "Youtuber removido com sucesso",
+        youtuber: youtuberRemover
+    })
+}
+
+export { getAllYoutubers, getById, creatYoutuber, updateYoutuber, deleteYoutuber }    
