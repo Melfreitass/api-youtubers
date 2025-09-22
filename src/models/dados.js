@@ -109,9 +109,9 @@ const youtubers = [
         "ultimoVideo": "2024-09-21",
         "pais": "Internacional"
       }
-];
+]
 
-export dafault { youtubers }
+export default { youtubers }
 
 //"id": 11,
 //"nome": "Luccas Neto",
