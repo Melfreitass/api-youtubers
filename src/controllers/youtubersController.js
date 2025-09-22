@@ -28,6 +28,13 @@ const getAllYoutubers = (req, res) => {
         }
     }
 
+    if (ultimoVideo) {
+        let dataHoje = new Date().getFullYear;
+        let diferenca = dataHoje - ultimoVideo;
+    
+        resultado = resultado.filter((l) => l.ultimoVideo = (diferenca < 30))
+    }
+
     res.status(200).json({
         total: youtubers.length,
         youtubers: resultado
