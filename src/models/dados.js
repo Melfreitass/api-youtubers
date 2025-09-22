@@ -4,10 +4,10 @@ const youtubers = [
         "nome": "MrBeast",
         "canal": "MrBeast",
         "categoria": "entretenimento",
-        "inscritos": "300M+",
+        "inscritos": 300000000,
         "videos": 791,
         "vizualizacoes": "50B+",
-        "ultimoVideo": "2024-09-21",
+        "ultimoVideo": "2025-09-21",
         "pais": "Estados Unidos"
       },
       {
@@ -15,7 +15,7 @@ const youtubers = [
         "nome": "PewDiePie",
         "canal": "PewDiePie",
         "categoria": "games e vlogs",
-        "inscritos": "111M+",
+        "inscritos": 111000000,
         "videos": 4768,
         "vizualizacoes": "29B+",
         "ultimoVideo": "2024-09-15",
@@ -26,10 +26,10 @@ const youtubers = [
         "nome": "Mark Rober",
         "canal": "Mark Rober",
         "categoria": "educativo",
-        "inscritos": "27M+",
+        "inscritos": 27000000,
         "videos": 96,
         "vizualizacoes": "3B+",
-        "ultimoVideo": "2024-09-19",
+        "ultimoVideo": "2025-08-20",
         "pais": "Estados Unidos"
       },
       {
@@ -37,10 +37,10 @@ const youtubers = [
         "nome": "Felipe Neto",
         "canal": "Felipe Neto",
         "categoria": "vlogs e humor",
-        "inscritos": "46M+",
+        "inscritos": 46000000,
         "videos": 5214,
         "vizualizacoes": "16B+",
-        "ultimoVideo": "2024-09-20",
+        "ultimoVideo": "2025-08-29",
         "pais": "Brasil"
       },
       {
@@ -48,10 +48,10 @@ const youtubers = [
         "nome": "AuthenticGames",
         "canal": "AuthenticGames",
         "categoria": "games",
-        "inscritos": "21M+",
+        "inscritos": 21000000,
         "videos": 7500,
         "vizualizacoes": "12B+",
-        "ultimoVideo": "2024-09-22",
+        "ultimoVideo": "2025-09-22",
         "pais": "Brasil"
       },
       {
@@ -59,10 +59,10 @@ const youtubers = [
         "nome": "Jovem Nerd",
         "canal": "Jovem Nerd",
         "categoria": "cultura pop",
-        "inscritos": "2M+",
+        "inscritos": 20000,
         "videos": 1800,
         "vizualizacoes": "300M+",
-        "ultimoVideo": "2024-09-21",
+        "ultimoVideo": "2025-05-21",
         "pais": "Brasil"
       },
       {
@@ -72,8 +72,8 @@ const youtubers = [
         "categoria": "educativo",
         "inscritos": "4M+",
         "videos": 700,
-        "vizualizacoes": "500M+",
-        "ultimoVideo": "2024-09-18",
+        "vizualizacoes": 5000,
+        "ultimoVideo": "2025-07-18",
         "pais": "Brasil"
       },
       {
@@ -83,8 +83,8 @@ const youtubers = [
         "categoria": "humor e vlogs",
         "inscritos": "44M+",
         "videos": 500,
-        "vizualizacoes": "4B+",
-        "ultimoVideo": "2024-08-30",
+        "vizualizacoes": 4000000,
+        "ultimoVideo": "2025-08-10",
         "pais": "Brasil"
       },
       {
@@ -94,8 +94,8 @@ const youtubers = [
         "categoria": "ciência e DIY",
         "inscritos": "18M+",
         "videos": 1800,
-        "vizualizacoes": "4B+",
-        "ultimoVideo": "2024-09-22",
+        "vizualizacoes": 4000000,
+        "ultimoVideo": "2025-09-10",
         "pais": "Brasil"
       },
       {
@@ -105,7 +105,7 @@ const youtubers = [
         "categoria": "palestras e ideias",
         "inscritos": "25M+",
         "videos": 4500,
-        "vizualizacoes": "2B+",
+        "vizualizacoes": 1000000,
         "ultimoVideo": "2024-09-21",
         "pais": "Internacional"
       }
