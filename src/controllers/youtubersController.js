@@ -50,5 +50,54 @@ const getById = (req, res) => {
     })
 }
 
-export {getAllYoutubers, getById}
+const creatYoutuber = (req, res) => {
+    const {nome, canal, categoria, inscritos, videos, visualizacoes, ultimoVideo, pais} = req.body;
 
+    if (!nome) {
+        return res.status(400).json({
+            success: false,
+            message: `O nome do Youtuber é obrigatório`
+        })
+    }
+
+    if(canal) {
+        if (canal.length < 3) {
+            return res.status(400).json({
+                success: false,
+                message: `O nome do canal deve ter ao menos 3 caracteres`
+            })
+        }
+    }
+
+    if(inscritos) {
+        if (inscritos < 0) {
+            return res.status(400).json({
+                success: false,
+                message: `O numero de inscritos não pode ser negativo`
+        })
+    }
+}
+
+    const novoYoutuber = {
+        id: youtubers.length + 1,
+        nome, 
+        canal, 
+        categoria, 
+        inscritos, 
+        videos, 
+        visualizacoes, 
+        ultimoVideo, 
+        pais
+    }
+
+    youtubers.push(novoYoutuber);
+
+    res.status(201).json({
+        success: true,
+        message: "Youtuber cadastrado com sucesso!",
+        youtuber: novoYoutuber
+    })
+}
+
+
+export { getAllYoutubers, getById, creatYoutuber, updateYoutuber }    
